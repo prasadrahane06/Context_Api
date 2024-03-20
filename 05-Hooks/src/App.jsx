@@ -9,49 +9,49 @@
 //   };
 //   return (
 //     <div
-//       class="grid h-screen w-full place-content-center"
+//       className="grid h-screen w-full place-content-center"
 //       style={{ backgroundColor: color }}
 //     >
-//       <div class="bg-black">
-//         <div class="grid place-content-center gap-3 rounded-lg w-full h-full  bg-white px-4 py-4 md:flex border-2 border-black">
+//       <div className="bg-black">
+//         <div className="grid place-content-center gap-3 rounded-lg w-full h-full  bg-white px-4 py-4 md:flex border-2 border-black">
 //           <button
-//             class="rounded-lg bg-green-800 px-2 py-1"
+//             className="rounded-lg bg-green-800 px-2 py-1"
 //             onClick={() => handleColorChange("green")}
 //           >
 //             GREEN
 //           </button>
 //           <button
-//             class="rounded-lg bg-red-800 px-2 py-1"
+//             className="rounded-lg bg-red-800 px-2 py-1"
 //             onClick={() => handleColorChange("red")}
 //           >
 //             RED
 //           </button>
 //           <button
-//             class="rounded-lg bg-orange-800 px-2 py-1"
+//             className="rounded-lg bg-orange-800 px-2 py-1"
 //             onClick={() => handleColorChange("orange")}
 //           >
 //             ORANGE
 //           </button>
 //           <button
-//             class="rounded-lg bg-pink-800 px-2 py-1"
+//             className="rounded-lg bg-pink-800 px-2 py-1"
 //             onClick={() => handleColorChange("pink")}
 //           >
 //             PINK
 //           </button>
 //           <button
-//             class="rounded-lg bg-yellow-300 px-2 py-1"
+//             className="rounded-lg bg-yellow-300 px-2 py-1"
 //             onClick={() => handleColorChange("yellow")}
 //           >
 //             YELLOW
 //           </button>
 //           <button
-//             class="rounded-lg bg-blue-800 px-2 py-1"
+//             className="rounded-lg bg-blue-800 px-2 py-1"
 //             onClick={() => handleColorChange("blue")}
 //           >
 //             BLUE
 //           </button>
 //           <button
-//             class="rounded-lg bg-lime-400 px-2 py-1"
+//             className="rounded-lg bg-lime-400 px-2 py-1"
 //             onClick={() => handleColorChange("lime")}
 //           >
 //             LIME
@@ -92,29 +92,29 @@
 //   const passwordRef = useRef(null);
 
 //   return (
-//     <div class="w-full grid h-screen place-content-center bg-black">
-//       <p className="text-white flex place-content-center text-[35px] py-4">
+//     <div className="w-full grid h-screen place-content-center bg-black">
+//       <p classNameName="text-white flex place-content-center text-[35px] py-4">
 //         Password Generator
 //       </p>
-//       <div class="h-full w-full rounded-lg bg-slate-600 px-4 py-4 shadow-lg">
-//         <div class="flex py-3">
+//       <div className="h-full w-full rounded-lg bg-slate-600 px-4 py-4 shadow-lg">
+//         <div className="flex py-3">
 //           <input
 //             type="text"
-//             class="w-full rounded-sm text-orange-500"
+//             className="w-full rounded-sm text-orange-500"
 //             placeholder="Password"
 //             value={password}
 //             readOnly
 //             ref={passwordRef}
 //           />
 //           <button
-//             className="outline-none bg-blue-700 text-white  px-2 py-0.s shrink-0 "
+//             classNameName="outline-none bg-blue-700 text-white  px-2 py-0.s shrink-0 "
 //             onClick={copyPasswordToClipboard}
 //           >
 //             COPY
 //           </button>
 //         </div>
 
-//         <div class="grid place-content-start gap-2 md:flex cursor-pointer">
+//         <div className="grid place-content-start gap-2 md:flex cursor-pointer">
 //           <input
 //             type="range"
 //             min={6}
@@ -124,9 +124,9 @@
 //               setLength(e.target.value);
 //             }}
 //           />
-//           <p class="text-orange-500">Length ({length})</p>
-//           <div class="md:flex md:gap-3">
-//             <div class="flex gap-1">
+//           <p className="text-orange-500">Length ({length})</p>
+//           <div className="md:flex md:gap-3">
+//             <div className="flex gap-1">
 //               <input
 //                 type="checkbox"
 //                 defaultChecked={numbers}
@@ -135,9 +135,9 @@
 //                   setNumbers((prev) => !prev);
 //                 }}
 //               />
-//               <p class="text-orange-500">Numbers</p>
+//               <p className="text-orange-500">Numbers</p>
 //             </div>
-//             <div class="flex gap-1">
+//             <div className="flex gap-1">
 //               <input
 //                 type="checkbox"
 //                 defaultChecked={char}
@@ -145,7 +145,7 @@
 //                   setChar((prev) => !prev);
 //                 }}
 //               />
-//               <p class="text-orange-500">Characters</p>
+//               <p className="text-orange-500">Characters</p>
 //             </div>
 //           </div>
 //         </div>

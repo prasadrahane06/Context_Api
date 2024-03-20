@@ -3,14 +3,14 @@ import { TodoItemsContext } from "../Store/todo-items-store";
 function TodoItem({ todoName, todoDate }) {
   const { deleteItem } = useContext(TodoItemsContext);
   return (
-    <div className="container">
-      <div className="row kg-row">
-        <div className="col-6">{todoName}</div>
-        <div className="col-4">{todoDate}</div>
-        <div className="col-2">
+    <div classNameName="container">
+      <div classNameName="row kg-row">
+        <div classNameName="col-6">{todoName}</div>
+        <div classNameName="col-4">{todoDate}</div>
+        <div classNameName="col-2">
           <button
             type="button"
-            className="btn btn-danger kg-button"
+            classNameName="btn btn-danger kg-button"
             onClick={() => deleteItem(todoName)}
           >
             Delete

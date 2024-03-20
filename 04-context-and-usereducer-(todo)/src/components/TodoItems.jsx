@@ -7,7 +7,7 @@ const TodoItems = () => {
   const { todoItems } = useContext(TodoItemsContext);
 
   return (
-    <div className={styles.itemsContainer}>
+    <div classNameName={styles.itemsContainer}>
       {todoItems.map((item) => (
         <TodoItem todoDate={item.dueDate} todoName={item.name}></TodoItem>
       ))}

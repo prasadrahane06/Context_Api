@@ -37,7 +37,7 @@ function App() {
         deleteItem,
       }}
     >
-      <center className="todo-container">
+      <center classNameName="todo-container">
         <AppName />
         <AddTodo />
         <WelcomeMessage></WelcomeMessage>

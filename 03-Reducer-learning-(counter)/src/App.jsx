@@ -15,18 +15,24 @@ function App() {
     dispatch({ type: "DECREMENT" });
   };
   return (
-    <div className="grid place-content-center items-center  w-full h-screen  ">
-      <div className="border-2 border-black w-60 h-40 flex flex-col items-center content-center:bg-yellow-200 sm:bg-slate-300">
-        <div className=" items-center place-content-center flex mt-3">
-          <p className="text-red-700 font-bold text-4xl">{state.count}</p>
+    <div classNameName="grid place-content-center items-center  w-full h-screen  ">
+      <div classNameName="border-2 border-black w-60 h-40 flex flex-col items-center content-center:bg-yellow-200 sm:bg-slate-300">
+        <div classNameName=" items-center place-content-center flex mt-3">
+          <p classNameName="text-red-700 font-bold text-4xl">{state.count}</p>
         </div>
-        <div className="w-[110px] bg-slate-600 p-1 mt-3 rounded-xl text-white flex place-content-center ">
-          <button className="font-bold text-xl" onClick={handleIncrementClick}>
+        <div classNameName="w-[110px] bg-slate-600 p-1 mt-3 rounded-xl text-white flex place-content-center ">
+          <button
+            classNameName="font-bold text-xl"
+            onClick={handleIncrementClick}
+          >
             Increment
           </button>
         </div>
-        <div className="w-[110px] bg-slate-600 p-1 mt-3 rounded-xl text-white">
-          <button className="font-bold text-xl" onClick={handleDecrementClick}>
+        <div classNameName="w-[110px] bg-slate-600 p-1 mt-3 rounded-xl text-white">
+          <button
+            classNameName="font-bold text-xl"
+            onClick={handleDecrementClick}
+          >
             Decrement
           </button>
         </div>

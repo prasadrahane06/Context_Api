@@ -18,19 +18,19 @@ function App() {
   // actual change in theme
 
   useEffect(() => {
-    document.querySelector("html").classList.remove("light", "dark");
-    document.querySelector("html").classList.add(themeMode);
+    document.querySelector("html").classNameList.remove("light", "dark");
+    document.querySelector("html").classNameList.add(themeMode);
   }, [themeMode]);
 
   return (
     <ThemeContextProvider value={{ themeMode, lightTheme, darkTheme }}>
-      <div className="flex flex-wrap min-h-screen items-center">
-        <div className="w-full">
-          <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
+      <div classNameName="flex flex-wrap min-h-screen items-center">
+        <div classNameName="w-full">
+          <div classNameName="w-full max-w-sm mx-auto flex justify-end mb-4">
             <Themebtn />
           </div>
 
-          <div className="w-full max-w-sm mx-auto">
+          <div classNameName="w-full max-w-sm mx-auto">
             <Card />
           </div>
         </div>
