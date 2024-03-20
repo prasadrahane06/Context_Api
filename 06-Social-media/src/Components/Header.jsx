@@ -16,7 +16,7 @@ export const Header = () => {
               role="img"
               aria-label="Bootstrap"
             >
-              <use xlink:Href="#bootstrap"></use>
+              <use xlinkHref="#bootstrap"></use>
             </svg>
           </a>
 
