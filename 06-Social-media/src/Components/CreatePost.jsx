@@ -2,9 +2,9 @@ import React from "react";
 
 const CreatePost = () => {
   return (
-    <form>
+    <form className="grid place-content-center my-[157px] ml-[510px] border border-gray-200 rounded-lg shadow w-96 py-10 ">
       <div className="mb-3">
-        <label htmlFor="exampleInputEmail1" className="form-label">
+        <label htmlFor="title" className="form-label">
           Email address
         </label>
         <input
@@ -37,7 +37,7 @@ const CreatePost = () => {
           Check me out
         </label>
       </div>
-      <button type="submit" className="btn btn-primary text-black">
+      <button type="submit" className="btn btn-primary text-black ">
         Submit
       </button>
     </form>
