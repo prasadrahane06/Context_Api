@@ -12,11 +12,12 @@ function App() {
 
   return (
     <PostListProvider>
-      <div className="flex h-screen">
+      <div className="flex h-screen ">
         <Siderbar selectedtab={selectedTab} SetselectedTab={setSelectedTab} />
-        <div className="w-full">
+        <div className="w-full overflow-hidden">
           <Header />
           {selectedTab === "Home" ? <PostList /> : <CreatePost />}
+
           <Footer />
         </div>
       </div>

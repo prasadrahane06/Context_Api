@@ -4,7 +4,7 @@ import { PostList as PostListData } from "../Store/postList-store";
 const Post = ({ post }) => {
   const { deletePost } = useContext(PostListData);
   return (
-    <div className="card mx-[40px] my-[40px] w-[400px]">
+    <div className="card mx-[40px] mt-[40px] w-[400px] border-gray-200 rounded-lg shadow ">
       <div className="card-body">
         <h5 className="card-title font-bold uppercase text-[20px]">
           {post.title}

@@ -7,8 +7,9 @@ export const PostList = createContext({
 });
 const postListReducer = (state, action) => {
   switch (action.type) {
-    case "NEW_ITEM":
-    // return [...state, { name: action.name, dueDate: action.dueDate }];
+    case "ADD_POST":
+      return [action.payload, ...state];
+
     case "DELETE_POST":
       return state.filter((post) => post.id !== action.id);
     default:
@@ -21,7 +22,22 @@ const PostListProvider = ({ children }) => {
     postListReducer,
     DEFAULT_POST_LIST
   );
-  const addPost = () => {};
+  const addPost = (userId, title, content, reactions, tags) => {
+    // console.log(
+    //   `${userId} ${userId}  ${title} ${content} ${reactions}, ${tags}`
+    // );
+    dispatchPostList({
+      type: "ADD_POST",
+      payload: {
+        id: Date.now(),
+        title: title,
+        body: content,
+        reactions: reactions,
+        userId: userId,
+        tags: tags,
+      },
+    });
+  };
   const deletePost = (postId) => {
     // dispatchPostList({
     //   type: "DELETE_POST",
