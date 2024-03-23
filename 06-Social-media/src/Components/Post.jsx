@@ -4,8 +4,8 @@ import { PostList as PostListData } from "../Store/postList-store";
 const Post = ({ post }) => {
   const { deletePost } = useContext(PostListData);
   return (
-    <div className="card mx-[40px] mt-[40px] w-[400px] border-gray-200 rounded-lg shadow ">
-      <div className="card-body">
+    <div className="card mx-[40px] mt-[40px] m-w-[400px] border-gray-200 rounded-lg shadow ">
+      <div className="card-body ">
         <h5 className="card-title font-bold uppercase text-[20px]">
           {post.title}
           <span
@@ -25,7 +25,7 @@ const Post = ({ post }) => {
             {tag}
           </span>
         ))}
-        <div class="alert alert-success mt-6" role="alert">
+        <div class="alert alert-success mt-6 w-full" role="alert">
           These post has been reacted by{" "}
           <span className="font-bold text-red-500">{post.reactions} </span>
           peopel.
