@@ -4,11 +4,15 @@ export const PostList = createContext({
   postList: [],
   addPost: () => {},
   deletePost: () => {},
+  addInitialPosts: () => {},
 });
 const postListReducer = (state, action) => {
   switch (action.type) {
     case "ADD_POST":
       return [action.payload, ...state];
+
+    case "ADD_INITIAL_POSTS":
+      return action.payload.posts;
 
     case "DELETE_POST":
       return state.filter((post) => post.id !== action.id);
@@ -18,10 +22,7 @@ const postListReducer = (state, action) => {
 };
 
 const PostListProvider = ({ children }) => {
-  const [postList, dispatchPostList] = useReducer(
-    postListReducer,
-    DEFAULT_POST_LIST
-  );
+  const [postList, dispatchPostList] = useReducer(postListReducer, []);
   const addPost = (userId, title, content, reactions, tags) => {
     // console.log(
     //   `${userId} ${userId}  ${title} ${content} ${reactions}, ${tags}`
@@ -38,6 +39,14 @@ const PostListProvider = ({ children }) => {
       },
     });
   };
+  const addInitialPosts = (posts) => {
+    dispatchPostList({
+      type: "ADD_INITIAL_POSTS",
+      payload: {
+        posts,
+      },
+    });
+  };
   const deletePost = (postId) => {
     // dispatchPostList({
     //   type: "DELETE_POST",
@@ -48,28 +57,30 @@ const PostListProvider = ({ children }) => {
     dispatchPostList({ type: "DELETE_POST", id: postId });
   };
   return (
-    <PostList.Provider value={{ postList, addPost, deletePost }}>
+    <PostList.Provider
+      value={{ postList, addPost, deletePost, addInitialPosts }}
+    >
       {children}
     </PostList.Provider>
   );
 };
 
-const DEFAULT_POST_LIST = [
-  {
-    id: "1",
-    title: "Going to mumbai",
-    body: "Hii friends I am going to mumbai to enjoy",
-    reactions: 2,
-    userId: "user-9",
-    tags: ["vacation", "Mumbai"],
-  },
-  {
-    id: "2",
-    title: "We DId it ",
-    body: "We became the richest person on the planet",
-    reactions: 15,
-    userId: "user-12",
-    tags: ["Rich", "unbelievable"],
-  },
-];
+// const DEFAULT_POST_LIST = [
+//   {
+//     id: "1",
+//     title: "Going to mumbai",
+//     body: "Hii friends I am going to mumbai to enjoy",
+//     reactions: 2,
+//     userId: "user-9",
+//     tags: ["vacation", "Mumbai"],
+//   },
+//   {
+//     id: "2",
+//     title: "We DId it ",
+//     body: "We became the richest person on the planet",
+//     reactions: 15,
+//     userId: "user-12",
+//     tags: ["Rich", "unbelievable"],
+//   },
+// ];
 export default PostListProvider;

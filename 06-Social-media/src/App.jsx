@@ -12,7 +12,7 @@ function App() {
 
   return (
     <PostListProvider>
-      <div className="flex h-screen ">
+      <div className="flex  ">
         <Siderbar selectedtab={selectedTab} SetselectedTab={setSelectedTab} />
         <div className="w-full overflow-hidden">
           <Header />
