@@ -6,7 +6,7 @@ import { Siderbar } from "../Components/Siderbar";
 import CreatePost from "../Components/CreatePost";
 import PostList from "../Components/PostList";
 import PostListProvider from "../Store/postList-store";
-import { Outlet } from "react-router-dom";
+import { Outlet  } from "react-router-dom";
 
 function App() {
   const [selectedTab, setSelectedTab] = useState("Home");

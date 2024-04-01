@@ -7,9 +7,10 @@ import CreatePost from "./Components/CreatePost.jsx";
 import PostList from "./Components/PostList.jsx";
 
 // const router = createBrowserRouter([{ path: "/", element: <App /> },
-// { path: "/create-post", element: <CreatePost />}]);//these renderes only the page the header and footer are not rendered
-
+// { path: "/create-post", element: <CreatePost />}]);//these renderes only the page the header and footer are not rendered 
 //Layout routes
+
+// "/ " represents the common path for every one  and which means teh App com should be rendered for all pages and and also if someone is in "/" show postlist 
 const router = createBrowserRouter([
   {
     path: "/",
