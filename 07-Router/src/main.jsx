@@ -1,10 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./routes/App.jsx";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./index.css";
+import CreatePost from "./Components/CreatePost.jsx";
+import PostList from "./Components/PostList.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+// const router = createBrowserRouter([{ path: "/", element: <App /> },
+// { path: "/create-post", element: <CreatePost />}]);//these renderes only the page the header and footer are not rendered
+
+//Layout routes
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { path: "/", element: <PostList /> },
+      { path: "/create-post", element: <CreatePost /> },
+    ],
+  },
+]); //these renderes only the page the header and footer are not rendered
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+    {/* <App /> */}
+  </React.StrictMode>
+);
