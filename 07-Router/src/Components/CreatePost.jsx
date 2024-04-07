@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react";
 import { PostList } from "../Store/postList-store";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate,useSearchParams } from "react-router-dom";
 
 const CreatePost = () => {
   const { addPost } = useContext(PostList);
@@ -39,11 +39,19 @@ const CreatePost = () => {
       .then((res) => res.json())
       .then((post) => {
         addPost(post);
-        navigate("/");
+        navigate("/", {
+          post: post,
+        });
       });
 
     // addPost(userId, title, content, reactions, tags);
   };
+
+
+  const [searchParams] = useSearchParams({
+    name: 'amardip',
+    age: '23'
+  });
   return (
     <form
       className="grid  md:ml-[300px] mx-[20px] border border-gray-200 rounded-lg shadow min-w-60 max-w-3xl py-10 h-auto mt-[30px] "
@@ -62,6 +70,7 @@ const CreatePost = () => {
             placeholder="Enter your UserId here"
           />
         </div>
+
         <div className="mb-3 ">
           <label htmlFor="title" className="form-label font-semibold">
             Post Title :
@@ -119,6 +128,16 @@ const CreatePost = () => {
       >
         Post
       </button>
+      <Link to={{
+        pathname : "/",
+        state : {
+          name : "amardip",
+          age : 23
+        } , 
+        search: searchParams.toString()
+      }}>
+        <button>hello  </button>
+      </Link>
     </form>
   );
 };

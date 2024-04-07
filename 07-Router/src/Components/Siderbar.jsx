@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Siderbar = () => {
+ ;
   return (
     <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark ">
       <a
